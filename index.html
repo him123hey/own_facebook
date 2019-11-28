@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>own facebook</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#myModal">Add
+                    New</button>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h2>Add New</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" name="name" id="name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile">Profile:</label>
+                                        <input type="text" name="profle" id="profile" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="post">Post:</label>
+                                        <input type="text" name="post" id="post" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="text">What your mind?</label>
+                                        <input type="text" name="text" id="text" class="form-control">
+                                    </div>
+                                    <button class="btn btn-info btn-block" type="button" id="add">Add New</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <br>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" >
+                <div class="col-2"></div>
+                <div class="col-8" id="result"> 
+                </div>
+                <div class="col-2"></div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBXp-WcKkdMky9kvfgj8G6bwo9jR1s67r8",
+            authDomain: "hw03-9b315.firebaseapp.com",
+            databaseURL: "https://hw03-9b315.firebaseio.com",
+            projectId: "hw03-9b315",
+            storageBucket: "hw03-9b315.appspot.com",
+            messagingSenderId: "972762816614",
+            appId: "1:972762816614:web:9aa66a6b193ba5a9d8cda7",
+            measurementId: "G-9QESRC9655"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var database = firebase.firestore();
+    </script>
+    <script src="js/process.js"></script>
+</body>
+
+</html>
